@@ -35,11 +35,21 @@ const User = commerdedb.define(
             allowNull: false,
             validate: {
                 isEmail: true,
+                notNull: {
+                    msg: 'Password is required!'
+                }
             }
         },
         password: {
             type: Sequelize.TEXT,
-            allowNull: false
+            allowNull: false,
+            validate: {
+                notNull: {
+                    msg: 'Password is required!'
+                }
+            }
         }
     }
 )
+
+module.exports = User;
