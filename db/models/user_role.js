@@ -7,6 +7,9 @@ const UserRole = commerdedb.define(
         role_name: {
             type: Sequelize.TEXT
         }
+    },
+    {
+        timestamps: false,
     }
 );
 

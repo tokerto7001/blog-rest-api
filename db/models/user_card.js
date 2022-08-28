@@ -1,4 +1,3 @@
-const Sequelize = require('sequelize');
 const commerdedb = require('../index');
 
 const UserCard = commerdedb.define(
