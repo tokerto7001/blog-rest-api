@@ -3,6 +3,7 @@ const app = express();
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const morgan = require('morgan');
+const apiRoutes = require('./routes');
 require('dotenv').config();
 
 require('./db');
@@ -17,6 +18,7 @@ app.use(express.urlencoded({ extended: true, limit: "50mb" }));
 
 app.use(morgan(':method :url :status :res[content-length] - :response-time ms'))
 
+app.use('/api', apiRoutes);
 
 // set up a 404 error handler
 app.all("*", (req, res, next) => {
