@@ -48,6 +48,11 @@ const User = commerdedb.define(
                     msg: 'Password is required!'
                 }
             }
+        },
+        verify: {
+            type: Sequelize.BOOLEAN,
+            allowNull: false,
+            defaultValue: false
         }
     }
 )
