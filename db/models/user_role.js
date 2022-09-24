@@ -9,7 +9,7 @@ const UserRole = commerdedb.define(
         }
     },
     {
-        timestamps: false,
+        timestamps: true,
     }
 );
 
